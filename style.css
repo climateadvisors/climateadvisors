@@ -1,0 +1,195 @@
+/* Variáveis de Cores */
+:root {
+    --color-primary: #0077B6; /* Azul Profundo (para links e botões) */
+    --color-secondary: #004D64; /* Azul mais escuro (para fundo) */
+    --color-text: #333333; /* Texto Principal */
+    --color-light-bg: #f5f5f5; /* Fundo de Seção Clara */
+    --color-white: #ffffff;
+    --color-accent-green: #4CAF50; /* Toque de sustentabilidade */
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Layout do Cabeçalho e Navegação */
+header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-primary);
+}
+
+.cta-button {
+    background-color: var(--color-primary);
+    color: var(--color-white) !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold !important;
+}
+
+/* Seção HERO (Principal) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('placeholder-bg.jpg') no-repeat center center/cover;
+    /* Imagem de fundo deve ser carregada separadamente. Por enquanto, é um placeholder. */
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.cta-primary {
+    display: inline-block;
+    background-color: var(--color-accent-green);
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-primary:hover {
+    background-color: #388E3C;
+}
+
+/* Estilo Geral das Seções */
+.section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2em;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section .subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.light-bg {
+    background-color: var(--color-light-bg);
+}
+
+/* Grid de Serviços */
+.service-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.service-grid div {
+    flex: 1;
+    min-width: 280px;
+    padding: 30px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.service-grid h3 {
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+/* Responsividade Básica (Para telas menores) */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Em telas menores, o menu pode ser escondido ou transformado em um menu hambúrguer */
+    }
+    nav {
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero {
+        padding: 100px 20px;
+    }
+    .service-grid {
+        flex-direction: column;
+    }
+}
